@@ -1,0 +1,41 @@
+
+
+<div class="page-header">
+    <h1> Список машин </h1>
+   
+ </div>   
+ <input class="form-control" [(ngModel)]="car" placeholder = "Марка" required />   
+ <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" required/>  
+ <input class="form-control" [(ngModel)]="model" placeholder = "Модель"required />
+ <input class="form-control" [(ngModel)]="owner" placeholder = "Владелец" required/>
+ <input class="form-control" [(ngModel)]="color" placeholder = "Цвет"required />
+
+                
+<button class="btn btn-default" (click)="addItem(car, price, model, owner,color )">Занести данные</button>
+            
+   
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Марка</th>
+                <th>Модель</th>
+                <th>Цвет</th>
+                <th>Цена</th>
+                <th>Владелец</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td>{{item.car}}</td>
+                <td>{{item.model}}</td>
+                <td>{{item.color}}</td>
+                <td>{{item.price}}</td>
+                
+                <td>{{item.owner}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+    

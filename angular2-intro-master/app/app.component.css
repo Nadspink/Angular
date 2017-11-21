@@ -1,0 +1,13 @@
+th{
+    
+    width: 100px;
+    
+}
+td{
+    text-align: center;
+}
+tr:hover{
+    cursor: pointer;
+    color: black;
+    background: rgb(8, 147, 228);
+}
